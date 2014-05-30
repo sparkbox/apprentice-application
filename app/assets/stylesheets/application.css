@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+h1 {
+    color:red;
+}
+
+.welcome {
+    text-align: center;
+}

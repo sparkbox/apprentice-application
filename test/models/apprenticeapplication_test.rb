@@ -6,12 +6,19 @@ class ApprenticeapplicationTest < ActiveSupport::TestCase
     @a = apprenticeapplications(:bob)
   end
 
-  test 'valid only with all attributes present' do
-    assert @a.valid?, 'Apprentice application was not valid'
+  test 'when name is invalid' do
+    @a.name = nil
+    assert !@a.valid?, 'apprentice application is missing a valid name'
   end
 
-  test 'it should be invalid with an empty name' do
-    @a.name = ''
-    assert !@a.valid?, 'invalid without a name'
+  test 'when email is not present' do
+    @a.email = ''
+    assert !@a.valid?, 'email cannot be empty'
   end
+
+  test 'when name is too long' do
+    @a.name = "z"*31
+    assert !@a.valid?, 'name cannot be more than 30 characters!'
+  end
+
 end

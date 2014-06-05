@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
   <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -85,5 +86,21 @@
     <div class="logo"><a href="http://www.seesparkbox.com" title="Sparkbox logo"><img src="img/SBX_logo_icon_2.svg" alt="Sparkbox logo"></a></div>
     <p>Proudly built by <a href="http://www.seesparkbox.com">Sparkbox</a> Apprentices v 3.0</p>
   </footer>
+
+  <title>Apprentice Application</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+</body>
+  <header>
+    <div class="logo">
+        <%= image_tag "SBX_logo_icon_2.svg" %>
+    </div>
+  </header>
+    <div class="container">
+        <%= yield %>
+    </div>
 </body>
 </html>

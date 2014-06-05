@@ -11,29 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140602204058) do
-
-  create_table "apprentices", force: true do |t|
-
-ActiveRecord::Schema.define(version: 20140603143943) do
-
-  create_table "apprentice_applications", force: true do |t|
-
-ActiveRecord::Schema.define(version: 20140603201514) do
-
-  create_table "apprenticeapplications", force: true do |t|
-
-ActiveRecord::Schema.define(version: 20140603201514) do
-
-  create_table "apprenticeapplications", force: true do |t|
-
-ActiveRecord::Schema.define(version: 20140603143943) do
-
-  create_table "apprentice_applications", force: true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end

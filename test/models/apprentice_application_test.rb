@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ApprenticeapplicationTest < ActiveSupport::TestCase
+class ApprenticeApplicationTest < ActiveSupport::TestCase
 
   def setup
     @a = apprenticeapplications(:bob)

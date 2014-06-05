@@ -1,12 +1,9 @@
-<section class="info">  
-    <h1>Apply</h1>
-    <p>How bad do you want it? What you provide us is very important — this is your opportunity to present your case. Choose your answers wisely, my friend!</p>
-        <div class='welcome'>
-        <h1>Apprentices Application Time!</h1>
-        <form>
-            <p>name <input type="text"></p>
-            <p>e-mail <input type="text"></p>
-            <input type="submit" value="Begin Application">
-        </form>
-      </div>
-</section>
+<%= form_for @apprenticeapplication do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :email %>:
+  <%= f.text_field :email %><br />
+
+  <%= f.submit %>
+<% end %>

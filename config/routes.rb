@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  resources :apprentice_applications
+  resources :apprentice_forms
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

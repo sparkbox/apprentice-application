@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @apprenticeapplication = ApprenticeApplication.new
+    @apprenticeform = ApprenticeForm.new
   end
 end

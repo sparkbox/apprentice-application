@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140603143943) do
 
-  create_table "apprenticeapplications", force: true do |t|
+  create_table "apprentice_applications", force: true do |t|
     t.string   "name"
     t.string   "email"
     t.datetime "created_at"

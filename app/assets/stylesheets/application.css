@@ -1,38 +1,16 @@
-body {
-	background-color: #CDF5DC;
-}
-
-.logo {
-	text-align: center;
-}
-
-.container {
-	text-align: center;
-}
-
-.new_apprenticeapplication {
-	background-color: #EEFFF4;
-	margin: 2em auto;
-	width: 300px;
-	height: 250px;
-	border-radius: 10px;
-}
-
-#apprenticeapplication_name, #apprenticeapplication_email {
-	background-color: white;
-	width: 200px;
-	height: 30px;
-	margin: 20px auto;
-}
-
-.new_apprenticeapplication input[type=submit] {
-	background-color: #000;
-	color: #FFF;
-	padding: 1.2em 2.1em;
-	margin: 20px auto;
-	border-radius: 0.3em;
-}
-
-label {
-	display: none;
-}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require apprentices
+ *= require_self
+ */

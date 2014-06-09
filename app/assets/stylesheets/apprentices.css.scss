@@ -3,8 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $base-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
 $color-one: #CDF5DC;
+$input-radius: 5px;
+$input-padding: 30px 150px;
 
 body {
     font: $base-font;
     background-color: $color-one;
+}
+
+.name, .email {
+    border-radius: $input-radius;
+    padding: $input-padding;
+    outline: 0;
+}
+
+.logo, form {
+    text-align: center;
+}
+
+label {
+    display: none;
+}
+
+input[type="submit"] {
 }

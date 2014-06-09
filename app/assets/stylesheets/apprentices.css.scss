@@ -4,17 +4,31 @@
 $base-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
 $color-one: #CDF5DC;
 $input-radius: 5px;
-$input-padding: 30px 150px;
+$input-width: 240px;
+$input-height: 60px;
+$input-margin: 20px;
 
 body {
     font: $base-font;
     background-color: $color-one;
 }
 
-.name, .email {
+.name, .email, input[type="submit"] {
     border-radius: $input-radius;
-    padding: $input-padding;
+    width: $input-width;
+    height: $input-height;
+    margin: $input-margin;
     outline: 0;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: gray;
+    color: black;
 }
 
 .logo, form {
@@ -23,7 +37,4 @@ body {
 
 label {
     display: none;
-}
-
-input[type="submit"] {
 }

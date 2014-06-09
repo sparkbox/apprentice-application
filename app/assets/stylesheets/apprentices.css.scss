@@ -8,6 +8,20 @@ $input-width: 240px;
 $input-height: 60px;
 $input-margin: 20px;
 
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
+@include placeholder {
+    padding-left: 10px;
+    color: #E5E5E5;
+    font-weight:bold;
+    font-size: 18px;
+}
+
 body {
     font: $base-font;
     background-color: $color-one;
@@ -37,4 +51,11 @@ input[type="submit"]:hover {
 
 label {
     display: none;
+}
+
+@mixin placeholder($placeholder-stuff) {
+  -webkit-placeholder: $placeholder-stuff;
+     -moz-placeholder: $placeholder-stuff;
+      -ms-placeholder: $placeholder-stuff;
+          placeholder: $placeholder-stuff;
 }

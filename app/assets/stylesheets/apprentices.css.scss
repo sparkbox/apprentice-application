@@ -35,6 +35,12 @@ body {
     outline: 0;
 }
 
+input[type=text] {
+    color: black;
+    font-weight:bold;
+    font-size: 18px;
+}
+
 input[type="submit"] {
     background-color: black;
     color: white;

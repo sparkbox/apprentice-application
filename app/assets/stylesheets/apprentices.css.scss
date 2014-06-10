@@ -16,7 +16,6 @@ $input-margin: 20px;
 }
 
 @include placeholder {
-    padding-left: 10px;
     color: #E5E5E5;
     font-weight:bold;
     font-size: 18px;
@@ -31,15 +30,16 @@ body {
     border-radius: $input-radius;
     width: $input-width;
     height: $input-height;
+    padding: 0 .5em;
     margin: $input-margin;
     outline: 0;
     border-style: none;
 }
 
-.name:focus, .email:focus, input[type="submit"]:focus {
-    border-style: solid; 
-    border-color: lightblue;
-    border-width: 3px;
+:focus {
+    outline-width: thick;
+    outline-style: solid;
+    outline-color: red;
 }
 
 input[type=text] {

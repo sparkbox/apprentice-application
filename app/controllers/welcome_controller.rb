@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
   end
 
   def create
-    @apprenticeform = ApprenticeForm.new(apprentice_params)
+    @apprenticeform = ApprenticeForm.new(params[:apprenticeform])
 
     respond_to do |format|
       if @apprenticeform.save
@@ -17,3 +17,4 @@ class WelcomeController < ApplicationController
     end
   end
 end
+

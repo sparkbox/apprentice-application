@@ -1,9 +1,9 @@
 <%= form_for @apprenticeform, url: apprentice_forms_path, html: {class:"apprentice_application_form"} do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name, :class => 'name', :placeholder => 'name' %><br />
+  <%= f.text_field :name, :class => 'name', :placeholder => 'name', :maxlength => '128' %><br />
 
   <%= f.label :email %>
-  <%= f.text_field :email, :class => 'email', :placeholder => 'email' %><br />
+  <%= f.text_field :email, :class => 'email', :placeholder => 'email', :maxlength => '128' %><br />
 
   <%= f.submit "Create" %>
 <% end %>

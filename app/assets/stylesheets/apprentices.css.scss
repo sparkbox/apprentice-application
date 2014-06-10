@@ -33,12 +33,19 @@ body {
     height: $input-height;
     margin: $input-margin;
     outline: 0;
+    border-style: none;
+}
+
+.name:focus, .email:focus, input[type="submit"]:focus {
+    border-style: solid; 
+    border-color: lightblue;
+    border-width: 3px;
 }
 
 input[type=text] {
     color: black;
     font-weight:bold;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 input[type="submit"] {
@@ -64,4 +71,13 @@ label {
      -moz-placeholder: $placeholder-stuff;
       -ms-placeholder: $placeholder-stuff;
           placeholder: $placeholder-stuff;
+}
+
+.container {
+    background-color: lightgreen;
+    padding-top: 15px;
+    height: 320px;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
 }

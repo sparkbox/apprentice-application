@@ -24,7 +24,7 @@ class ApprenticesController < ApplicationController
   # POST /apprentices
   # POST /apprentices.json
   def create
-    @apprentice = Apprentice.new(apprentice_params)
+    @apprentice = Apprentice.new(params[:apprentice])
 
     respond_to do |format|
       if @apprentice.save

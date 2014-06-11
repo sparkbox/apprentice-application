@@ -1,9 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 bob:
-  name: Bob
+  first_name: Bob
   email: bob@canhefixit.com
-
-two:
-  name: MyString
-  email: MyString

@@ -11,13 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140609150705) do
+ActiveRecord::Schema.define(version: 20140610185119) do
 
   create_table "apprentice_forms", force: true do |t|
-    t.string   "name"
+    t.string   "first_name"
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "last_name"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.boolean  "willing_to_move", default: false
   end
 
 end

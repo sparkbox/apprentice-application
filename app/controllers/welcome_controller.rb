@@ -1,10 +1,22 @@
 class WelcomeController < ApplicationController
+
+  # GET /apprentices
+  # GET /apprentices.json
   def index
     @apprenticeform = ApprenticeForm.new
   end
 
+  # GET /apprentices/1
+  # GET /apprentices/1.json
+  def show
+  end
+
+  # GET /apprentices/1/edit
+  def edit
+  end
+
   def create
-    @apprenticeform = ApprenticeForm.new(apprentice_params)
+    @apprenticeform = ApprenticeForm.new(params[:apprenticeform])
 
     respond_to do |format|
       if @apprenticeform.save
@@ -17,3 +29,4 @@ class WelcomeController < ApplicationController
     end
   end
 end
+

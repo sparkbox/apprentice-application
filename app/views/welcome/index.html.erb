@@ -1,9 +1,12 @@
-<%= form_for @apprenticeform, url: apprentice_forms_path, html: {class:"apprentice_application_form"} do |f| %>
-  <%= f.label :name %>:
-  <%= f.text_field :name %><br />
+<%= form_for @apprenticeform, url: welcome_index_path, html: {class:"apprentice_application_form"} do |f| %>
 
-  <%= f.label :email %>:
-  <%= f.text_field :email %><br />
+  <%= f.text_field :first_name, :class => 'name', :placeholder => 'first name', :maxlength => '128' %><br />
+  <%= f.text_field :last_name, :class => 'name', :placeholder => 'last name', :maxlength => '128'%>
+  <%= f.text_field :email, :class => 'email', :placeholder => 'email', :maxlength => '128' %><br />
+  <%= f.date_field :start_date, :class => 'dates_available' %><br />
+  <%= f.date_field :start_date, :class => 'dates_available' %><br />
+  <%= f.radio_button :willing_to_move, :class => 'willing_to_relocate' %> Insert Text Here
+
 
   <%= f.submit "Create" %>
 <% end %>

@@ -3,8 +3,82 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $base-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
 $color-one: #CDF5DC;
+$input-radius: 5px;
+$input-width: 240px;
+$input-height: 60px;
+$input-margin: 20px;
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
+@include placeholder {
+    color: #E5E5E5;
+    font-weight:bold;
+    font-size: 18px;
+}
 
 body {
     font: $base-font;
     background-color: $color-one;
+}
+
+.name, .email, input[type="submit"] {
+    border-radius: $input-radius;
+    width: $input-width;
+    height: $input-height;
+    padding: 0 .5em;
+    margin: $input-margin;
+    outline: 0;
+    border-style: none;
+}
+
+:focus {
+    outline-width: thick;
+    outline-style: solid;
+    outline-color: red;
+}
+
+input[type=text] {
+    color: black;
+    font-weight:bold;
+    font-size: 20px;
+}
+
+input[type="submit"] {
+    padding: 0 .5em;
+    background-color: black;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: gray;
+    color: black;
+}
+
+.logo, form {
+    text-align: center;
+}
+
+label {
+    display: none;
+}
+
+@mixin placeholder($placeholder-stuff) {
+  -webkit-placeholder: $placeholder-stuff;
+     -moz-placeholder: $placeholder-stuff;
+      -ms-placeholder: $placeholder-stuff;
+          placeholder: $placeholder-stuff;
+}
+
+.container {
+    background-color: #B7E4C4;
+    padding-top: 15px;
+    height: 320px;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
 }

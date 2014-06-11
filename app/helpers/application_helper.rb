@@ -1,4 +1,5 @@
 module ApplicationHelper
+
   #returns the full title of a page
   def full_title(page_title)
     base_title = "Sparkbox Apprentice Application"
@@ -8,4 +9,5 @@ module ApplicationHelper
       "#{base_title} | #{page_title}"
     end
   end
+
 end

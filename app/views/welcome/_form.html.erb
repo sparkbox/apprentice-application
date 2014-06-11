@@ -1,0 +1,12 @@
+<%= form_for @apprenticeform, :url => {:action => "create"} , method: :post, html: {class:"apprentice_application_form"} do |f| %>
+
+  <%= f.text_field :first_name, :class => 'name', :placeholder => 'first name', :maxlength => '128' %><br />
+  <%= f.text_field :last_name, :class => 'name', :placeholder => 'last name', :maxlength => '128'%>
+  <%= f.text_field :email, :class => 'email', :placeholder => 'email', :maxlength => '128' %><br />
+  <%= f.date_field :start_date, :class => 'dates_available' %><br />
+  <%= f.date_field :end_date, :class => 'dates_available' %><br />
+  <%= f.radio_button :willing_to_move, :class => 'willing_to_relocate' %> Insert Text Here
+
+
+  <%= f.submit "Create" %>
+<% end %>

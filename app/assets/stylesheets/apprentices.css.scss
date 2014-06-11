@@ -12,7 +12,7 @@ $input-margin: 20px;
   ::-webkit-input-placeholder {@content}
   :-moz-placeholder           {@content}
   ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}  
+  :-ms-input-placeholder      {@content}
 }
 
 @include placeholder {
@@ -81,4 +81,13 @@ label {
     width: 300px;
     margin: 0 auto;
     border-radius: 10px;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 10em;
+  text-align:left;
+  float: left;
 }

@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
-  resources :apprentices
 
-  get 'welcome/index'
-
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
   root 'welcome#index'
+  get 'welcome/index'
+  # get ':controller(/:action(/:id))'
 
-  resources :apprentice_forms
+  # # resources :apprentice_forms
+
+  # post '/welcome/:id' => 'welcome#create'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

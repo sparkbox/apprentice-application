@@ -4,9 +4,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   # get ':controller(/:action(/:id))'
 
-  # # resources :apprentice_forms
-
-  # post '/welcome/:id' => 'welcome#create'
+  post 'welcome' => 'welcome#create'
 
 
   # Example of regular route:

@@ -9,6 +9,7 @@ class WelcomeController < ApplicationController
   # GET /apprentices/1
   # GET /apprentices/1.json
   def show
+    @apprenticeform = ApprenticeForm.find(apprentice_form_params)
   end
 
   # GET /apprentices/1/edit
@@ -16,7 +17,9 @@ class WelcomeController < ApplicationController
   end
 
   def create
-    @apprenticeform = ApprenticeForm.new(params[:apprenticeform])
+    p params
+    return render text: params.to_s
+    @apprenticeform = ApprenticeForm.create(apprentice_form_params)
 
     respond_to do |format|
       if @apprenticeform.save
@@ -28,5 +31,11 @@ class WelcomeController < ApplicationController
       end
     end
   end
+
+  private
+  def apprentice_form_params
+    params.require(:apprentice_form).permit(:first_name, :last_name, :email, :start_date, :end_date, :willing_to_move)
+  end
+
 end
 

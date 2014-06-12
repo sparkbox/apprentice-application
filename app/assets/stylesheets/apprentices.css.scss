@@ -9,6 +9,7 @@ $apprentice-orange: #FAC8A1;
 $apprentice-yellow: #F8F0B4;
 $black: #000;
 $gray: #E5E5E5;
+$apprentice-radius: 6px;
 
 @mixin placeholder {
   ::-webkit-input-placeholder {@content}
@@ -31,14 +32,14 @@ $gray: #E5E5E5;
   color: inherit;
   border: 1px solid #aaa;
   outline: 0;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 .yes-no--response, .willing_to_relocate {
   display: inline;
 }
 
 .yes-no--response {
-  margin-left: 5px;
+  margin-left: 6px;
 }
 
 .yes-no {
@@ -50,7 +51,6 @@ $gray: #E5E5E5;
     outline-width: thick;
     outline-style: solid;
     outline-color: $apprentice-orange;
-    border-radius: 7px;
 }
 
 input[type=text] {
@@ -61,17 +61,26 @@ input[type=text] {
     display: block;
     width: 230px;
     padding: 1em 1em;
-    margin: auto;
+    margin: 3em auto 0em auto;
     background-color: $black;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: $apprentice-radius;
 }
 
 .button:hover {
     background-color: gray;
     color: $black;
 }
+
+::-webkit-datetime-edit-year-field[aria-valuetext=blank],
+::-webkit-datetime-edit-month-field[aria-valuetext=blank],
+::-webkit-datetime-edit-day-field[aria-valuetext=blank],
+::-webkit-datetime-edit-month-field[aria-valuetext=blank] + ::-webkit-datetime-edit-text[aria-valuetext=blank] {
+    color: $gray;
+}
+
+
 
 @mixin placeholder($placeholder-stuff) {
   -webkit-placeholder: $placeholder-stuff;
@@ -83,6 +92,7 @@ input[type=text] {
 .container {
     background-color: $apprentice-blue;
     width: 300px;
-    margin: auto;
-    padding: 2em;
+    margin: 2em auto;
+    padding: 4em 2em;
+    border-radius: 9px;
 }

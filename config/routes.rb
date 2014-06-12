@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
   root 'welcome#index'
-  get 'welcome/index'
-  # get ':controller(/:action(/:id))'
 
+  # resources :welcome
+  get 'welcome' => 'welcome#new'
   post 'welcome' => 'welcome#create'
+  get 'step_two/:id' => 'welcome#edit' #make this in a demographic controller!
 
 
   # Example of regular route:

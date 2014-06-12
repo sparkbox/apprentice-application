@@ -1,12 +1,13 @@
 // Place all the styles related to the apprentices controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$base-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
-$color-one: #CDF5DC;
-$input-radius: 5px;
-$input-width: 240px;
-$input-height: 60px;
-$input-margin: 20px;
+@import 'reset';
+
+$apprentice-blue: #C7E1E9;
+$apprentice-green: #B7E4C4;
+$apprentice-orange: #FAC8A1;
+$apprentice-yellow: #F8F0B4;
+$black: #000;
 
 @mixin placeholder {
   ::-webkit-input-placeholder {@content}
@@ -21,42 +22,39 @@ $input-margin: 20px;
     font-size: 18px;
 }
 
-body {
-    font: $base-font;
-    background-color: $color-one;
-}
-
-.name, .email, input[type="submit"] {
-    border-radius: $input-radius;
-    width: $input-width;
-    height: $input-height;
-    padding: 0 .5em;
-    margin: $input-margin;
-    outline: 0;
-    border-style: none;
+#apprentice_form_first_name, #apprentice_form_last_name, #apprentice_form_email, input[type="submit"] {
+  display: block;
+  width: 200px;
+  // margin: 0 auto 10px;
+  // padding: 10px 15px;
+  font-size: 14px;
+  color: inherit;
+  border: 1px solid #aaa;
+  outline: 0;
+  border-radius: 5px;
 }
 
 :focus {
     outline-width: thick;
     outline-style: solid;
-    outline-color: red;
+    outline-color: $apprentice-orange;
+    border-radius: 7px;
 }
 
 input[type=text] {
-    color: black;
-    font-weight:bold;
-    font-size: 20px;
+    color: $black;
+    font-weight: normal;
 }
 
 input[type="submit"] {
     padding: 0 .5em;
-    background-color: black;
+    background-color: $black;
     color: white;
 }
 
 input[type="submit"]:hover {
     background-color: gray;
-    color: black;
+    color: $black;
 }
 
 .logo, form {
@@ -75,10 +73,5 @@ label {
 }
 
 .container {
-    background-color: #B7E4C4;
-    padding-top: 15px;
-    height: 320px;
-    width: 300px;
-    margin: 0 auto;
-    border-radius: 10px;
+    background-color: $apprentice-blue;
 }

@@ -1,12 +1,14 @@
 <%= form_for @apprenticeform, url: welcome_index_path, html: {class:"apprentice_application_form"} do |f| %>
 
-  <%= f.text_field :first_name, :class => 'name', :placeholder => 'first name', :maxlength => '128' %>
+  <%= f.text_field :first_name, :class => 'name', :placeholder => 'first name', :maxlength => '128'%>
   <%= f.text_field :last_name, :class => 'name', :placeholder => 'last name', :maxlength => '128'%>
   <%= f.text_field :email, :class => 'email', :placeholder => 'email', :maxlength => '128' %>
-  <%= f.date_field :start_date, :class => 'dates_available' %>
-  <%= f.date_field :start_date, :class => 'dates_available' %>
-  <%= f.radio_button :willing_to_move, :class => 'willing_to_relocate' %> Insert Text Here
+  <p class="info-header">What dates are you available?</p>
+  <%= f.date_field :start_date, :class => 'dates_available', :placeholder => 'from' %>
+  <%= f.date_field :start_date, :class => 'dates_available', :placeholder => 'to' %>
+  <p class="info-header">Are you willing to move to Dayton, Ohio?</p>
+  <%= f.radio_button :willing_to_move, :class => 'willing_to_relocate', :value => 'yes'%><p class="radio">Yes. I'll be there.</p>
+  <%= f.radio_button :willing_to_move, :class => 'willing_to_relocate', :value => 'no'%><p class="radio">No. I'm too cool for Dayton.</p>
 
-
-  <%= f.submit "Create" %>
+  <%= f.submit "Begin Application", :class => 'button' %>
 <% end %>

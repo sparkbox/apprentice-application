@@ -8,6 +8,7 @@ $apprentice-green: #B7E4C4;
 $apprentice-orange: #FAC8A1;
 $apprentice-yellow: #F8F0B4;
 $black: #000;
+$gray: #E5E5E5;
 
 @mixin placeholder {
   ::-webkit-input-placeholder {@content}
@@ -17,21 +18,23 @@ $black: #000;
 }
 
 @include placeholder {
-    color: #E5E5E5;
-    font-weight:bold;
-    font-size: 18px;
+    color: $gray;
+    font-weight: normal;
 }
 
-#apprentice_form_first_name, #apprentice_form_last_name, #apprentice_form_email, input[type="submit"] {
+.name, .email, .dates_available, {
   display: block;
   width: 200px;
-  // margin: 0 auto 10px;
-  // padding: 10px 15px;
+  margin: 0 auto 10px;
+  padding: 10px 15px;
   font-size: 14px;
   color: inherit;
   border: 1px solid #aaa;
   outline: 0;
   border-radius: 5px;
+}
+.radio, input[type="radio"] {
+  display: inline;
 }
 
 :focus {
@@ -43,26 +46,19 @@ $black: #000;
 
 input[type=text] {
     color: $black;
-    font-weight: normal;
 }
 
-input[type="submit"] {
-    padding: 0 .5em;
+.button {
+    display: block;
+    padding: 1em 1em;
+    margin: auto;
     background-color: $black;
     color: white;
 }
 
-input[type="submit"]:hover {
+.button:hover {
     background-color: gray;
     color: $black;
-}
-
-.logo, form {
-    text-align: center;
-}
-
-label {
-    display: none;
 }
 
 @mixin placeholder($placeholder-stuff) {

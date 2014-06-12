@@ -33,8 +33,17 @@ $gray: #E5E5E5;
   outline: 0;
   border-radius: 5px;
 }
-.radio, input[type="radio"] {
+.yes-no--response, .willing_to_relocate {
   display: inline;
+}
+
+.yes-no--response {
+  margin-left: 5px;
+}
+
+.yes-no {
+  text-align: left;
+  margin: 1em 11.2%;
 }
 
 :focus {
@@ -50,10 +59,13 @@ input[type=text] {
 
 .button {
     display: block;
+    width: 230px;
     padding: 1em 1em;
     margin: auto;
     background-color: $black;
     color: white;
+    border: none;
+    border-radius: 6px;
 }
 
 .button:hover {
@@ -70,4 +82,7 @@ input[type=text] {
 
 .container {
     background-color: $apprentice-blue;
+    width: 300px;
+    margin: auto;
+    padding: 2em;
 }

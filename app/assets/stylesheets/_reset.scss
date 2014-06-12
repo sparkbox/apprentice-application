@@ -1,0 +1,20 @@
+// _reset.scss
+
+$reset-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: #FFF;
+    font-family: $reset-font;
+}
+
+form {
+    text-align: center;
+}
+
+label {
+    display: none;
+}

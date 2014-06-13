@@ -7,8 +7,11 @@
   <%= f.date_field :start_date, :class => 'dates_available', :placeholder => 'from' %>
   <%= f.date_field :start_date, :class => 'dates_available', :placeholder => 'to' %>
   <p class="info-header">Are you willing to move to Dayton, Ohio?</p>
-  <%= f.radio_button :willing_to_move, :class => 'willing_to_relocate', :value => 'yes'%><p class="radio">Yes. I'll be there.</p>
-  <%= f.radio_button :willing_to_move, :class => 'willing_to_relocate', :value => 'no'%><p class="radio">No. I'm too cool for Dayton.</p>
-
+  <div class="yes-no">
+    <%= f.radio_button :willing_to_move, :class => 'willing_to_relocate', :value => 'yes'%><p class="yes-no--response">Yes. I'll be there.</p>
+  </div>
+  <div class="yes-no">
+    <%= f.radio_button :willing_to_move, :class => 'willing_to_relocate', :value => 'no'%><p class="yes-no--response">No. I'm too cool for Dayton.</p>
+  </div>
   <%= f.submit "Begin Application", :class => 'button' %>
 <% end %>

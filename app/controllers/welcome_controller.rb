@@ -6,13 +6,6 @@ class WelcomeController < ApplicationController
     @apprenticeform = ApprenticeForm.new
   end
 
-  def new
-    @apprenticeform = ApprenticeForm.new
-  end
-
-  def edit
-  end
-
   def create
 
     # return params
@@ -26,7 +19,7 @@ class WelcomeController < ApplicationController
     respond_to do |format|
       if @apprenticeform.save
         flash[:notice] = 'Apprentice was successfully created.'
-        format.html { redirect_to welcome_path(@apprenticeform) }
+        format.html { redirect_to step_two_path}
         format.json { render :show, status: :created, location: @apprenticeform }
       else
         flash[:notice] = 'Empty fields not allowed.'

@@ -1,1 +1,5 @@
-<p>Some text for index in demographics controller </p>
+<%= form_for @apprenticeform, :url => step_three_path do |f| %>
+<%= render 'demographic_step', :f => f %>
+<%= f.submit "Create" %>
+<% end %>
+

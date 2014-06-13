@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
 
-  root 'welcome#index'
+  root 'welcome#index' #root
 
   # resources :welcome
-  get 'welcome' => 'welcome#new' # -> allows demographics partial to render
-  post 'welcome' => 'welcome#create' # -> posts
-  get 'step_two' => 'welcome#edit'
-  get 'step_two/:id' => 'demographics#index'
+  get 'welcome' => 'welcome#index' # /welcome second page
+  post 'welcome' => 'welcome#create' # /welcome third page
+  get 'step_two' => 'demographics#index'
+  post 'step_two' => 'demographics#create'
+  get 'step_three' => 'personality#index'
+  post 'step_three' => 'personality#create'
+  # get 'step_four' => 'why#index'
+  # post 'step_four' => 'why#create'
+
+  # get 'step_two/:id' => 'demographics#index'
 
 
   # Example of regular route:

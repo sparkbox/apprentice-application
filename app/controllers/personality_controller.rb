@@ -1,11 +1,10 @@
-class DemographicsController < ApplicationController
+class PersonalityController < ApplicationController
 
   def index
     @apprenticeform = ApprenticeForm.new
   end
 
   def create
-      # return params
       @apprenticeform = ApprenticeForm.new
   #   if @apprenticeform.save
   #     flash[:notice] = 'Apprentice was successfully created'
@@ -16,7 +15,7 @@ class DemographicsController < ApplicationController
     respond_to do |format|
       if @apprenticeform.save
         flash[:notice] = 'Apprentice was successfully created.'
-        format.html { redirect_to step_three_path}
+        format.html { redirect_to step_four_path}
         format.json { render :show, status: :created, location: @apprenticeform }
       else
         flash[:notice] = 'Empty fields not allowed.'

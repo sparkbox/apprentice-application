@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   # resources :welcome
-  get 'welcome' => 'welcome#new'
-  post 'welcome' => 'welcome#create'
-  get 'step_two/:id' => 'welcome#edit' #make this in a demographic controller!
+  get 'welcome' => 'welcome#new' # -> allows demographics partial to render
+  post 'welcome' => 'welcome#create' # -> posts
+  get 'step_two' => 'welcome#edit'
+  get 'step_two/:id' => 'demographics#index'
 
 
   # Example of regular route:

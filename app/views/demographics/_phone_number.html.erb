@@ -1,0 +1,4 @@
+<%= fields_for 'phone_numbers[]', phone_number do |f| %>
+<% f.text_field :area_code, :index => phone_number_counter %>
+<% f.text_field :number, :index => phone_number_counter %>
+<% end %>

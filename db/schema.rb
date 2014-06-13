@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140610185119) do
+ActiveRecord::Schema.define(version: 20140613201924) do
 
   create_table "apprentice_forms", force: true do |t|
     t.string   "first_name"
@@ -22,6 +22,10 @@ ActiveRecord::Schema.define(version: 20140610185119) do
     t.date     "start_date"
     t.date     "end_date"
     t.boolean  "willing_to_move", default: false
+    t.string   "phone_number"
+    t.string   "address"
+    t.string   "url"
+    t.string   "social_url"
   end
 
 end

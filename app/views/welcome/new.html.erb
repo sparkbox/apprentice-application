@@ -1,3 +1,4 @@
-<p>hello</p>
-
-<%= link_to 'Back', welcome_path %>
+<%= form_for @apprenticeform, :url => welcome_path do |f| %>
+  <%= render 'demographic_step', :f => f %>
+  <%= f.submit "Next" %>
+<% end %>

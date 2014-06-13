@@ -6,18 +6,30 @@ class WelcomeController < ApplicationController
     @apprenticeform = ApprenticeForm.new
   end
 
+  def new
+    @apprenticeform = ApprenticeForm.new
+  end
+
   def edit
   end
 
   def create
 
-    @apprenticeform = ApprenticeForm.create(apprentice_form_params)
+    # return params
+    @apprenticeform = ApprenticeForm.new(apprentice_form_params)
+  #   if @apprenticeform.save
+  #     flash[:notice] = 'Apprentice was successfully created'
+  #     redirect_to welcome_path(@apprenticeform)
+  #   end
+  # end
 
     respond_to do |format|
       if @apprenticeform.save
-        format.html { redirect_to welcome_path(@apprenticeform), notice: 'Apprentice was successfully created.' }
+        flash[:notice] = 'Apprentice was successfully created.'
+        format.html { redirect_to welcome_path(@apprenticeform) }
         format.json { render :show, status: :created, location: @apprenticeform }
       else
+        flash[:notice] = 'Empty fields not allowed.'
         format.html { render :index }
         format.json { render json: @apprenticeform.errors, status: :unprocessable_entity }
       end

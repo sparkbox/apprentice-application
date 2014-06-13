@@ -15,7 +15,7 @@ class PersonalityController < ApplicationController
     respond_to do |format|
       if @apprenticeform.save
         flash[:notice] = 'Apprentice was successfully created.'
-        format.html { redirect_to step_four_path}
+        format.html { redirect_to welcome_path}
         format.json { render :show, status: :created, location: @apprenticeform }
       else
         flash[:notice] = 'Empty fields not allowed.'

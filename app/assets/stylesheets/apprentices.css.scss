@@ -59,6 +59,7 @@ input[type=text] {
 }
 
 .button {
+    font-family: "Bodoni W01 Bold Italic 709608", 'Times New Roman';
     display: block;
     width: 230px;
     padding: 1em 1em;
@@ -92,8 +93,5 @@ input[type=text] {
 
 .container {
     background-color: $apprentice-blue;
-    width: 300px;
-    margin: 2em auto;
-    padding: 4em 2em;
-    border-radius: 9px;
+    width: 100%;
 }

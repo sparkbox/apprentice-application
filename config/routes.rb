@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
 
-  root 'welcome#index'
-  get 'welcome/index'
-  # get ':controller(/:action(/:id))'
+  root 'welcome#index' #root
 
-  # # resources :apprentice_forms
+  # resources :welcome
+  get 'welcome' => 'welcome#index' # /welcome second page
+  post 'welcome' => 'welcome#create' # /welcome third page
+  get 'step_two' => 'demographics#index'
+  post 'step_two' => 'demographics#create'
+  get 'step_three' => 'personality#index'
+  post 'step_three' => 'personality#create'
+  # get 'step_four' => 'why#index'
+  # post 'step_four' => 'why#create'
 
-  # post '/welcome/:id' => 'welcome#create'
+  # get 'step_two/:id' => 'demographics#index'
 
 
   # Example of regular route:

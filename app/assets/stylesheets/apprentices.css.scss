@@ -59,6 +59,15 @@ input[type=text] {
 }
 
 .button {
+  font-family: "Bodoni W01 Bold Italic 709608", 'Times New Roman';
+  display: block;
+  width: 230px;
+  padding: 1em 1em;
+  margin: 3em auto 0em auto;
+  background-color: $black;
+  color: white;
+  border: none;
+  border-radius: $apprentice-radius;
   display: block;
   width: 230px;
   padding: 1em 1em;
@@ -92,9 +101,7 @@ input[type=text] {
 
 .container {
   background-color: $apprentice-blue;
-  width: 300px;
-  margin: 0 auto;
-  border-radius: 10px;
+  width: 100%;
 }
 
 .debug_dump {

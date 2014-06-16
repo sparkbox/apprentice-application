@@ -1,6 +1,6 @@
 <%= form_for @apprenticeform, :url => welcome_path, method: :post, html: {class:"apprentice_application_form"} do |f| %>
 
-<%= render "#{@apprenticeform.current_step}_step", :f => f %>
+<%= render 'basic_information_step', :f => f %>
 
 <%= f.submit "Create" %>
 <% end %>

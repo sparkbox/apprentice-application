@@ -13,6 +13,8 @@
         <%= image_tag "SBX_logo_icon_2.svg" %>
     </div>
   </header>
+
+    <%= @apprenticeform.errors.full_messages.first if @apprenticeform.errors.any? %>
     <div class="container">
         <%= yield %>
 

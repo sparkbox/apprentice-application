@@ -1,5 +1,7 @@
-<%= form_for @apprenticeform, :url => welcome_path do |f|%>
-<h2>Who Am I?</h2>
-  <%= f.text_area :about_me %>
+<%= form_for @apprenticeform, :url => step_three_path do |f|%>
+
+  <%= render 'personality', :f => f %>
+
   <%= f.submit "Create" %>
+
 <% end %>

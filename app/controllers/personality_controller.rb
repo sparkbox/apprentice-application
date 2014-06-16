@@ -1,15 +1,11 @@
-class WelcomeController < ApplicationController
+class PersonalityController < ApplicationController
 
-  # GET /apprentices
-  # GET /apprentices.json
   def index
     @apprenticeform = ApprenticeForm.new
   end
 
   def create
-
-    # return params
-    @apprenticeform = ApprenticeForm.new(apprentice_form_params)
+      @apprenticeform = ApprenticeForm.new
   #   if @apprenticeform.save
   #     flash[:notice] = 'Apprentice was successfully created'
   #     redirect_to welcome_path(@apprenticeform)
@@ -19,7 +15,7 @@ class WelcomeController < ApplicationController
     respond_to do |format|
       if @apprenticeform.save
         flash[:notice] = 'Apprentice was successfully created.'
-        format.html { redirect_to step_two_path}
+        format.html { redirect_to welcome_path}
         format.json { render :show, status: :created, location: @apprenticeform }
       else
         flash[:notice] = 'Empty fields not allowed.'
@@ -29,10 +25,4 @@ class WelcomeController < ApplicationController
     end
   end
 
-  private
-  def apprentice_form_params
-    params.require(:apprentice_form).permit(:first_name, :last_name, :email, :start_date, :end_date, :willing_to_move)
-  end
-
 end
-

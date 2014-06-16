@@ -16,12 +16,12 @@ $apprentice-radius: 6px;
   ::-webkit-input-placeholder {@content}
   :-moz-placeholder           {@content}
   ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}  
+  :-ms-input-placeholder      {@content}
 }
 
 @include placeholder {
-    color: $gray;
-    font-weight: normal;
+  color: $gray;
+  font-weight: normal;
 }
 
 .name, .email, .dates_available, {
@@ -49,51 +49,62 @@ $apprentice-radius: 6px;
 }
 
 :focus {
-    outline-width: thick;
-    outline-style: solid;
-    outline-color: $apprentice-orange;
+  outline-width: thick;
+  outline-style: solid;
+  outline-color: $apprentice-orange;
 }
 
 input[type=text] {
-    color: $black;
+  color: $black;
 }
 
 .button {
-    display: block;
-    width: 230px;
-    padding: 1em 1em;
-    margin: 3em auto 0em auto;
-    background-color: $black;
-    color: white;
-    border: none;
-    border-radius: $apprentice-radius;
+  display: block;
+  width: 230px;
+  padding: 1em 1em;
+  margin: 3em auto 0em auto;
+  background-color: $black;
+  color: white;
+  border: none;
+  border-radius: $apprentice-radius;
 }
 
 .button:hover {
-    background-color: gray;
-    color: $black;
+  background-color: gray;
+  color: $black;
 }
 
 ::-webkit-datetime-edit-year-field[aria-valuetext=blank],
 ::-webkit-datetime-edit-month-field[aria-valuetext=blank],
 ::-webkit-datetime-edit-day-field[aria-valuetext=blank],
 ::-webkit-datetime-edit-month-field[aria-valuetext=blank] + ::-webkit-datetime-edit-text[aria-valuetext=blank] {
-    color: $gray;
+  color: $gray;
 }
 
 
 
 @mixin placeholder($placeholder-stuff) {
   -webkit-placeholder: $placeholder-stuff;
-     -moz-placeholder: $placeholder-stuff;
-      -ms-placeholder: $placeholder-stuff;
-          placeholder: $placeholder-stuff;
+  -moz-placeholder: $placeholder-stuff;
+  -ms-placeholder: $placeholder-stuff;
+  placeholder: $placeholder-stuff;
 }
 
 .container {
-    background-color: $apprentice-blue;
-    width: 300px;
-    margin: 2em auto;
-    padding: 4em 2em;
-    border-radius: 9px;
+  background-color: $apprentice-blue;
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 10em;
+  text-align:left;
+  float: left;
+  margin: 2em auto;
+  padding: 4em 2em;
+  border-radius: 9px;
 }

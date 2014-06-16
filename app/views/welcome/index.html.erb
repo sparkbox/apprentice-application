@@ -1,5 +1,8 @@
-<%= form_for @apprenticeform, url: welcome_index_path, html: {class:"apprentice_application_form"} do |f| %>
+<%= form_for @apprenticeform, :url => welcome_path, method: :post, html: {class:"apprentice_application_form"} do |f| %>
 
+<%= render 'basic_information_step', :f => f %>
+
+<%= f.submit "Create" %>
   <%= f.text_field :first_name, :class => 'name', :placeholder => 'first name', :maxlength => '128'%>
   <%= f.text_field :last_name, :class => 'name', :placeholder => 'last name', :maxlength => '128'%>
   <%= f.text_field :email, :class => 'email', :placeholder => 'email', :maxlength => '128' %>

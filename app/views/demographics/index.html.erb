@@ -1,0 +1,7 @@
+<%= form_for @apprenticeform, :url => step_two_path, method: :post do |f| %>
+
+  <%= render 'demographic_step', :f => f %>
+
+  <%= f.submit "Create" %>
+<% end %>
+

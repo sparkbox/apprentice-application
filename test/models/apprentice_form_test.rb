@@ -16,6 +16,10 @@ class ApprenticeFormTest < ActiveSupport::TestCase
     assert !@a.valid?, 'apprentice application is missing a valid last name'
   end
 
+  test 'when page is visited' do
+
+  end
+
   # test 'when email is not present' do
   #   @a.email = ''
   #   assert !@a.valid?, 'email cannot be empty'

@@ -51,12 +51,6 @@
     </div>
   </header>
 
-    <%= @apprenticeform.errors.full_messages.first if @apprenticeform.errors.any? %>
-    <div class="container">
-        <%= yield %>
-
-    </div>
-    <%= debug(params) if Rails.env.development? %>
 <body>
   <header class="page-header">
     <h1 class="page-title--special">Learn More &amp; Apply</h1>
@@ -71,11 +65,14 @@
   <section class="info">
     <h1 class="info-header">Apply</h1>
     <p class="info-secondary">How bad do you want it? What you provide us is very important — this is your opportunity to present your case. Choose your answers wisely, my friend!</p>
-    <a href="https://docs.google.com/a/heysparkbox.com/spreadsheet/viewform?formkey=dG9LNXU2M05MZEVnUE4teHJqeW9VSUE6MQ#gid=0" class="button">Begin Application</a>
+ <!--    <a href="https://docs.google.com/a/heysparkbox.com/spreadsheet/viewform?formkey=dG9LNXU2M05MZEVnUE4teHJqeW9VSUE6MQ#gid=0" class="button">Begin Application</a> -->
   </section>
-  <div class="container">
-      <%= yield %>
-  </div>
+   <%= @apprenticeform.errors.full_messages.first if @apprenticeform.errors.any? %>
+    <div class="container">
+        <%= yield %>
+
+    </div>
+    <%= debug(params) if Rails.env.development? %>
     <footer>
     <div>
       <a href="http://www.seesparkbox.com" title="Sparkbox logo"><img class="logo-footer" src="img/SBX_logo_icon_2.svg" alt="Sparkbox logo"></a>

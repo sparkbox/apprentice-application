@@ -1,12 +1,16 @@
 // Place all the styles related to the apprentices controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$base-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
-$color-one: #CDF5DC;
-$input-radius: 5px;
-$input-width: 240px;
-$input-height: 60px;
-$input-margin: 20px;
+@import 'reset';
+@import 'page';
+
+$apprentice-blue: #C7E1E9;
+$apprentice-green: #B7E4C4;
+$apprentice-orange: #FAC8A1;
+$apprentice-yellow: #F8F0B4;
+$black: #000;
+$gray: #E5E5E5;
+$apprentice-radius: 6px;
 
 @mixin placeholder {
   ::-webkit-input-placeholder {@content}
@@ -16,71 +20,81 @@ $input-margin: 20px;
 }
 
 @include placeholder {
-    color: #E5E5E5;
-    font-weight:bold;
-    font-size: 18px;
+  color: $gray;
+  font-weight: normal;
 }
 
-body {
-    font: $base-font;
-    background-color: $color-one;
+.name, .email, .dates_available, {
+  display: block;
+  width: 200px;
+  margin: 0 auto 10px;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: inherit;
+  border: 1px solid #aaa;
+  outline: 0;
+  border-radius: 6px;
+}
+.yes-no--response, .willing_to_relocate {
+  display: inline;
 }
 
-.name, .email, input[type="submit"] {
-    border-radius: $input-radius;
-    width: $input-width;
-    height: $input-height;
-    padding: 0 .5em;
-    margin: $input-margin;
-    outline: 0;
-    border-style: none;
+.yes-no--response {
+  margin-left: 6px;
+}
+
+.yes-no {
+  text-align: left;
+  margin: 1em 11.2%;
 }
 
 :focus {
-    outline-width: thick;
-    outline-style: solid;
-    outline-color: red;
+  outline-width: thick;
+  outline-style: solid;
+  outline-color: $apprentice-orange;
 }
 
 input[type=text] {
-    color: black;
-    font-weight:bold;
-    font-size: 20px;
+  color: $black;
 }
 
-input[type="submit"] {
-    padding: 0 .5em;
-    background-color: black;
-    color: white;
+.button {
+  display: block;
+  width: 230px;
+  padding: 1em 1em;
+  margin: 3em auto 0em auto;
+  background-color: $black;
+  color: white;
+  border: none;
+  border-radius: $apprentice-radius;
 }
 
-input[type="submit"]:hover {
-    background-color: gray;
-    color: black;
+.button:hover {
+  background-color: gray;
+  color: $black;
 }
 
-.logo, form {
-    text-align: center;
+::-webkit-datetime-edit-year-field[aria-valuetext=blank],
+::-webkit-datetime-edit-month-field[aria-valuetext=blank],
+::-webkit-datetime-edit-day-field[aria-valuetext=blank],
+::-webkit-datetime-edit-month-field[aria-valuetext=blank] + ::-webkit-datetime-edit-text[aria-valuetext=blank] {
+  color: $gray;
 }
 
-label {
-    display: none;
-}
+
 
 @mixin placeholder($placeholder-stuff) {
   -webkit-placeholder: $placeholder-stuff;
-     -moz-placeholder: $placeholder-stuff;
-      -ms-placeholder: $placeholder-stuff;
-          placeholder: $placeholder-stuff;
+  -moz-placeholder: $placeholder-stuff;
+  -ms-placeholder: $placeholder-stuff;
+  placeholder: $placeholder-stuff;
 }
 
 .container {
-    background-color: #B7E4C4;
-    padding-top: 15px;
-    height: 320px;
-    width: 300px;
-    margin: 0 auto;
-    border-radius: 10px;
+  background-color: $apprentice-blue;
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
 .debug_dump {
@@ -90,4 +104,7 @@ label {
   margin-top: 10em;
   text-align:left;
   float: left;
+  margin: 2em auto;
+  padding: 4em 2em;
+  border-radius: 9px;
 }

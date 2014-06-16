@@ -1,12 +1,12 @@
 class DemographicsController < ApplicationController
 
-  def index
+  def new
     @apprenticeform = ApprenticeForm.new
   end
 
   def create
       # return params
-      @apprenticeform = ApprenticeForm.new(apprentice_form_params)
+      @apprenticeform = ApprenticeForm.create(apprentice_form_params)
       if @apprenticeform.save
         flash[:notice] = 'Apprentice was successfully created.'
         redirect_to step_three_path
@@ -24,3 +24,7 @@ class DemographicsController < ApplicationController
 
   end
 
+
+#edit and update, PUT.
+# Not create, use update attributes
+#  active record API

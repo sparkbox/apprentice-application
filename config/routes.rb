@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
 
-  root 'welcome#index' #root
+  root 'welcome#new' #root
 
   # resources :welcome
-  get 'welcome' => 'welcome#index' # /welcome second page
   post 'welcome' => 'welcome#create' # /welcome third page
-  get 'step_two' => 'demographics#index'
+  get 'step_two/:id' => 'demographics#new', as: 'edit_second_step'
   post 'step_two' => 'demographics#create'
   get 'step_three' => 'personality#index'
   post 'step_three' => 'personality#create'

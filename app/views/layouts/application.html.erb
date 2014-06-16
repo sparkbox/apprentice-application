@@ -44,52 +44,25 @@
      })();
   </script>
 </head>
-</body>
-  <header>
-    <div class="logo">
-        <%= image_tag "SBX_logo_icon_2.svg" %>
-    </div>
-  </header>
-
-<body>
   <header class="page-header">
     <h1 class="page-title--special">Learn More &amp; Apply</h1>
-<<<<<<< HEAD
   </header> 
   <%= image_tag "SBX_logo_icon_2.svg", class: "logo-special", alt: "Sparkbox Logo" %>
-=======
-  </header>
-  <img class="logo-special" src="img/SBX_logo_icon_2.svg" alt="Sparkbox logo"></a>
->>>>>>> 4e5466fc911b2b8352cd42ca1944120dd02fecda
   <section class="info">
     <h1 class="info-header">What You&rsquo;ll be doing</h1>
     <p class="info-secondary">In the first months of your apprenticeship, you&rsquo;ll be exposed to the core technologies of our work and work flow. Everyone, regardless of job title, will be brought to an understanding of Sparkbox&rsquo;s convictions on the priority of content, value of design, semantic HTML, and mobile-first CSS. You&rsquo;ll be exposed to our Github-centric project management, our deployment processes, best practices for clean code and separation of concerns, and unit testing techniques.</p>
     <p class="info-secondary">By the end of your apprenticeship, you&rsquo;ll be interacting as a full-fledged team member. Your confidence will be up, you&rsquo;ll have some work under your belt, and that&rsquo;s when the real fun begins.</p>
     <p class="info-secondary">Check out our <a href="https://github.com/sparkbox/apprenticeships">apprenticeship GitHub repository</a> to get a really good sense of what you&rsquo;ll be doing.</p>
   </section>
-<<<<<<< HEAD
   <section class="container">  
     <h1 class="info-header">Apply</h1>
     <p class="info-secondary">How bad do you want it? What you provide us is very important — this is your opportunity to present your case. Choose your answers wisely, my friend!</p>
+    <%= @apprenticeform.errors.full_messages.first if @apprenticeform.errors.any? %>
     <%= yield %>
   </section>
-=======
-  <section class="info">
-    <h1 class="info-header">Apply</h1>
-    <p class="info-secondary">How bad do you want it? What you provide us is very important — this is your opportunity to present your case. Choose your answers wisely, my friend!</p>
- <!--    <a href="https://docs.google.com/a/heysparkbox.com/spreadsheet/viewform?formkey=dG9LNXU2M05MZEVnUE4teHJqeW9VSUE6MQ#gid=0" class="button">Begin Application</a> -->
-  </section>
-   <%= @apprenticeform.errors.full_messages.first if @apprenticeform.errors.any? %>
-    <div class="container">
-        <%= yield %>
-
-    </div>
     <%= debug(params) if Rails.env.development? %>
->>>>>>> 4e5466fc911b2b8352cd42ca1944120dd02fecda
-    <footer>
-    <div>
-      <a href="http://www.seesparkbox.com" title="Sparkbox logo"><%= image_tag "SBX_logo_icon_2.svg", class: "logo-footer", alt: "Sparkbox Logo" %></a>
-    </div>
+  <footer>
+    <a href="http://www.seesparkbox.com" title="Sparkbox logo"><%= image_tag "SBX_logo_icon_2.svg", class: "logo-footer", alt: "Sparkbox Logo" %></a>
     <p>Proudly <a href="https://github.com/sparkbox/apprentices-page">built</a> by <a href="http://www.seesparkbox.com">Sparkbox</a> Apprentices v3.0</p>
   </footer>
 </body>

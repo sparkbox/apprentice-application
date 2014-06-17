@@ -1,28 +1,20 @@
 class PersonalityController < ApplicationController
 
-  def index
-    @apprenticeform = ApprenticeForm.new
+  def show
+    @apprenticeform = ApprenticeForm.find(params[:id])
   end
 
   def create
-      @apprenticeform = ApprenticeForm.new
-  #   if @apprenticeform.save
-  #     flash[:notice] = 'Apprentice was successfully created'
-  #     redirect_to welcome_path(@apprenticeform)
-  #   end
-  # end
-
-    respond_to do |format|
-      if @apprenticeform.save
-        flash[:notice] = 'Apprentice was successfully created.'
-        format.html { redirect_to welcome_path}
-        format.json { render :show, status: :created, location: @apprenticeform }
-      else
-        flash[:notice] = 'Empty fields not allowed.'
-        format.html { render :index }
-        format.json { render json: @apprenticeform.errors, status: :unprocessable_entity }
-      end
+    @apprenticeform = ApprenticeForm.create(apprentice_form_params)
+    if @apprenticeform.errors.any?
+      render :new
+    else
+      redirect_to edit_welcome_step_path(@apprenticeform)
     end
   end
 
+  private
+  def apprentice_form_params
+    params.require(:apprentice_form).permit(:about_me)
+  end
 end

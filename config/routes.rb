@@ -4,9 +4,10 @@ Rails.application.routes.draw do
 
   # resources :welcome
   post 'welcome' => 'welcome#create' # /welcome third page
-  get 'step_two/:id' => 'demographics#new', as: 'edit_second_step'
+  get 'step_two/:id' => 'demographics#show', as: 'edit_second_step'
   post 'step_two' => 'demographics#create'
-  get 'step_three' => 'personality#index'
+
+  get 'step_three/:id' => 'personality#show', as: 'edit_third_step'
   post 'step_three' => 'personality#create'
   # get 'step_four' => 'why#index'
   # post 'step_four' => 'why#create'

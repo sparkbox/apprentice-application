@@ -36,16 +36,12 @@ $apprentice-radius: 6px;
   border-radius: 6px;
 }
 .yes-no--response, .willing_to_relocate {
-  display: inline;
+  display: inline-block;
 }
 
 .yes-no--response {
+  font-family: "Bodoni W01 Book 709611", "Times New Roman";
   margin-left: 6px;
-}
-
-.yes-no {
-  text-align: left;
-  margin: 1em 11.2%;
 }
 
 :focus {
@@ -59,7 +55,7 @@ input[type=text] {
 }
 
 .button {
-  font-family: "Bodoni W01 Bold Italic 709608";
+  font-family: "Bodoni W01 Bold Italic 709608", "Times New Roman";
   display: block;
   width: 230px;
   padding: 1em 1em;

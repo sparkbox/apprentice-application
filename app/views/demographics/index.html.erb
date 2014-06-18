@@ -1,9 +1,8 @@
 <header class="page-header"></header>
-  <%= image_tag "SBX_logo_icon_2.svg", class: "logo-special--2", alt: "Sparkbox Logo" %>
-<section class="info">
-  <h1 class="info-header">Step 2</h1>
-  <p class="info-secondary">Wow. We're just blowing through nap time, aren't we. You go buy a tape recorder and record yourself for a whole day. I think you'll be surprised at some of your phrasing. Obviously this blue part here is the land.</p>
-</section>
+<%= image_tag "SBX_logo_icon_2.svg", class: "logo-special--2", alt: "Sparkbox Logo" %>
+
+<%= render 'section_2' %>
+
 <div class="container">
   <%= form_for @apprenticeform, :url => step_two_path, method: :post do |f| %>
 
@@ -12,3 +11,5 @@
   <%= f.submit "Next Step", :class => 'button-special' %>
   <% end %>
 </div>
+
+ <%= render 'footer' %>

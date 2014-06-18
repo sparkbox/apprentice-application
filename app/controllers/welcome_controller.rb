@@ -5,15 +5,19 @@ class WelcomeController < ApplicationController
   end
 
   def create
-
-    # return params
     @apprenticeform = ApprenticeForm.create(apprentice_form_params)
 
     if @apprenticeform.errors.any?
-      render :new
+      render :edit
     else
       redirect_to edit_second_step_path(@apprenticeform)
     end
+  end
+
+  def update
+    @apprenticeform = ApprenticeForm.find(params[:id])
+    @apprenticeform.update_attributes(apprentice_form_params)
+    redirect_to edit_second_step_path
   end
 
   private

@@ -9,7 +9,7 @@ class PersonalityController < ApplicationController
     if @apprenticeform.errors.any?
       render :new
     else
-      redirect_to edit_welcome_step_path(@apprenticeform)
+      redirect_to edit_confirm_step_path(@apprenticeform)
     end
   end
 

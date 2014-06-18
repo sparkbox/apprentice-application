@@ -1,0 +1,6 @@
+<%= form_for @apprenticeform, :url => confirm_step_path, method: :post do |f| %>
+
+  <%= render 'why_me_step', :f => f %>
+
+  <%= f.submit "Create" %>
+<% end %>

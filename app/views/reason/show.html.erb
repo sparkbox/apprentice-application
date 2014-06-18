@@ -1,6 +1,8 @@
-<%= form_for @apprenticeform, :url => confirm_step_path, method: :post do |f| %>
+<%= form_for @apprenticeform, :url => step_four_path, method: :post do |f| %>
 
-  <%= render 'why_me_step', :f => f %>
+  <h2>Why Pick me?</h2>
+  <%= f.text_area :why_me %>
+  <%= f.hidden_field :id %>
 
   <%= f.submit "Create" %>
 <% end %>

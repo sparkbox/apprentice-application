@@ -22,7 +22,7 @@ class WelcomeController < ApplicationController
 
   private
   def apprentice_form_params
-    params.require(:apprentice_form).permit(:first_name, :last_name, :email, :start_date, :end_date, :willing_to_move)
+    params.require(:apprentice_form).permit(:first_name, :last_name, :email, :start_date, :end_date, :willing_to_move, :id)
   end
 
 end

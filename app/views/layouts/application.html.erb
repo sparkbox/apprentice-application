@@ -3,34 +3,26 @@
 <head>
   <title>Sparkbox Apprenticeships</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/655912/688224/css/fonts.css" />
   <script type="text/javascript" src="http://fast.fonts.net/jsapi/0003f8c8-d8c7-4d1f-95ed-a15461eba017.js"></script>
   <script type="text/javascript">
-  var MTIProjectId='0003f8c8-d8c7-4d1f-95ed-a15461eba017';
-   (function() {
-          var mtiTracking = document.createElement('script');
-          mtiTracking.type='text/javascript';
-          mtiTracking.async='true';
-          mtiTracking.src=('https:'==document.location.protocol?'https:':'http:')+'//fast.fonts.net/t/trackingCode.js';
-          (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
-     })();
+    var MTIProjectId='0003f8c8-d8c7-4d1f-95ed-a15461eba017';
+    (function() {
+      var mtiTracking = document.createElement('script');
+      mtiTracking.type='text/javascript';
+      mtiTracking.async='true';
+      mtiTracking.src=('https:'==document.location.protocol?'https:':'http:')+'//fast.fonts.net/t/trackingCode.js';
+      (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild( mtiTracking );
+    })();
   </script>
 </head>
-  <header class="page-header">
-    <h1 class="page-title--special">Learn More &amp; Apply</h1>
-  </header>
-    <%= image_tag "SBX_logo_icon_2.svg", class: "logo-special", alt: "Sparkbox Logo" %>
+  <body>
     <%= yield %>
     <%= @apprenticeform.errors.full_messages.first if @apprenticeform.errors.any? %>
-  </section>
     <%= debug(params) if Rails.env.development? %>
-  <footer>
-    <a href="http://www.seesparkbox.com" title="Sparkbox logo"><%= image_tag "SBX_logo_icon_2.svg", class: "logo-footer", alt: "Sparkbox Logo" %></a>
-    <p>Proudly <a href="https://github.com/sparkbox/apprentices-page">built</a> by <a href="http://www.seesparkbox.com">Sparkbox</a> Apprentices v3.0</p>
-  </footer>
-</body>
+    <%= render 'footer' %>
+  </body>
 </html>

@@ -104,7 +104,7 @@ strong {
     font-style: normal;
     font-size: 2.3em;
     text-transform: uppercase;
-    margin: 1.1em auto 0.5em auto;
+    margin: 0.5em auto 0.5em auto;
     letter-spacing: .075em;
 }
 
@@ -289,7 +289,7 @@ footer p {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     padding-bottom: 4em;
-    margin: 1em;
+    margin-top: 1em;
 }
 
 .logo-footer {
@@ -307,6 +307,10 @@ footer p {
     margin-top: -4.06%;
 }
 
+.logo-special--2 {
+    width: 12%;
+    margin-top: -6.06%;
+}
 .page-title--special {
     font-family: 'Knockout 26 A', 'Knockout 26 B', 'Arial','Sans-Serif';
     font-weight: 400;

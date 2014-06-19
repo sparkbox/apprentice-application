@@ -1,8 +1,17 @@
+<header class="page-header"></header>
+  <%= image_tag "SBX_logo_icon_2.svg", class: "logo-special--2", alt: "Sparkbox Logo" %>
+<section class="info">
+  <h1 class="info-header">Step 4</h1>
+  <p class="info-secondary">Cardigan hashtag direct trade meggings, put a bird on it readymade ethical gentrify. Raw denim biodiesel pour-over narwhal. Williamsburg brunch butcher, artisan messenger bag YOLO DIY Kickstarter biodiesel drinking vinegar chillwave chia VHS Cosby sweater cliche. Photo booth Austin iPhone, meggings authentic mustache messenger bag..</p>
+</section>
+
+<div class="container">
 <%= form_for @apprenticeform, :url => step_four_path, method: :post do |f| %>
 
   <h2>Why Pick me?</h2>
   <%= f.text_area :why_me %>
   <%= f.hidden_field :id %>
 
-  <%= f.submit "Create" %>
+  <%= f.submit "Next Step", :class => button %>
 <% end %>
+</div>

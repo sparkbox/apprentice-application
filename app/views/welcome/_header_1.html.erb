@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <title>Sparkbox Apprenticeships</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -20,14 +17,3 @@
     })();
   </script>
 </head>
-  <header class="page-header">
-    <h1 class="page-title--special">Learn More &amp; Apply</h1>
-  </header>
-    <%= image_tag "SBX_logo_icon_2.svg", class: "logo-special", alt: "Sparkbox Logo" %>
-  <body>
-    <%= yield %>
-    <%= @apprenticeform.errors.full_messages.first if @apprenticeform.errors.any? %>
-    <%= debug(params) if Rails.env.development? %>
-    <%= render 'footer' %>
-  </body>
-</html>

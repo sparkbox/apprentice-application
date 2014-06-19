@@ -1,0 +1,15 @@
+<header class="page-header"></header>
+<%= image_tag "SBX_logo_icon_2.svg", class: "logo-special--2", alt: "Sparkbox Logo" %>
+
+<%= render 'section_2' %>
+
+<div class="container">
+  <%= form_for @apprenticeform, :url => step_two_path, method: :post do |f| %>
+
+  <%= render 'demographic_step', :f => f %>
+
+  <%= f.submit "Next Step", :class => 'button-special' %>
+  <% end %>
+</div>
+
+ <%= render 'footer' %>

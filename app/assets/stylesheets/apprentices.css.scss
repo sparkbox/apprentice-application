@@ -9,7 +9,7 @@ $apprentice-green: #B7E4C4;
 $apprentice-orange: #FAC8A1;
 $apprentice-yellow: #F8F0B4;
 $black: #000;
-$gray: #E5E5E5;
+$gray: #747474;
 $apprentice-radius: 6px;
 
 @mixin placeholder {
@@ -24,28 +24,30 @@ $apprentice-radius: 6px;
   font-weight: normal;
 }
 
-.name, .email, .dates_available, {
+.text-short, .dates_available, {
   display: block;
   width: 200px;
-  margin: 0 auto 10px;
-  padding: 10px 15px;
+  margin: 1.5em auto 10px;
+  padding: 10px;
   font-size: 14px;
   color: inherit;
   border: 1px solid #aaa;
   outline: 0;
   border-radius: 6px;
 }
+
+.text-box {
+  padding: 10px;
+  width: 60%;
+  height: 23.438em;
+}
 .yes-no--response, .willing_to_relocate {
-  display: inline;
+  display: inline-block;
 }
 
 .yes-no--response {
+  font-family: "Bodoni W01 Book 709611", "Times New Roman";
   margin-left: 6px;
-}
-
-.yes-no {
-  text-align: left;
-  margin: 1em 11.2%;
 }
 
 :focus {
@@ -56,41 +58,51 @@ $apprentice-radius: 6px;
 
 input[type=text] {
   color: $black;
+  margin-top: 1.5em;
+}
+
+.input-header {
+  font-family: "Bodoni W01 Book 709611", "Times New Roman";
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  margin: 1.5em 0 1.2em 0;
 }
 
 .button {
-  font-family: "Bodoni W01 Bold Italic 709608";
+  font-family: "Bodoni W01 Bold Italic 709608", "Times New Roman";
   display: block;
-  width: 230px;
+  width: 222px;
   padding: 1em 1em;
-  margin: 3em auto 0em auto;
-  background-color: $black;
-  color: white;
-  border: none;
-  border-radius: $apprentice-radius;
-  display: block;
-  width: 230px;
-  padding: 1em 1em;
-  margin: 3em auto 0em auto;
+  margin: 3em auto 0 auto;
   background-color: $black;
   color: white;
   border: none;
   border-radius: $apprentice-radius;
 }
 
-.button:hover {
+.button:hover, .button-special:hover {
   background-color: gray;
   color: $black;
 }
 
+.button-special {
+  font-family: "Bodoni W01 Bold Italic 709608", "Times New Roman";
+  display: block;
+  width: 222px;
+  padding: 1em 1em;
+  margin: 0 auto;
+  background-color: $black;
+  color: white;
+  border: none;
+  border-radius: $apprentice-radius;
+}
 ::-webkit-datetime-edit-year-field[aria-valuetext=blank],
 ::-webkit-datetime-edit-month-field[aria-valuetext=blank],
 ::-webkit-datetime-edit-day-field[aria-valuetext=blank],
 ::-webkit-datetime-edit-month-field[aria-valuetext=blank] + ::-webkit-datetime-edit-text[aria-valuetext=blank] {
   color: $gray;
 }
-
-
 
 @mixin placeholder($placeholder-stuff) {
   -webkit-placeholder: $placeholder-stuff;
@@ -102,16 +114,18 @@ input[type=text] {
 .container {
   background-color: $apprentice-blue;
   width: 100%;
+  padding: 0.5em 0 2em 0;
 }
 
+/* --- Parameters --- */
 .debug_dump {
   clear: both;
-  float: left;
+  float: center;
   width: 100%;
-  margin-top: 10em;
   text-align:left;
   float: left;
-  margin: 2em auto;
+  margin: 1em auto;
   padding: 4em 2em;
-  border-radius: 9px;
+  background-color: tomato;
 }
+/* --- end --- */

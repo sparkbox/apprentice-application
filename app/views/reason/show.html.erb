@@ -8,9 +8,7 @@
 <div class="container">
 <%= form_for @apprenticeform, :url => step_four_path, method: :post do |f| %>
 
-  <h2>Why Pick me?</h2>
-  <%= f.text_area :why_me %>
-  <%= f.hidden_field :id %>
+  <%= render "why_me",:f => f %>
 
   <%= f.submit "Next Step", :class => "button" %>
 <% end %>

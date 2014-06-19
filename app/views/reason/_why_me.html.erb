@@ -1,2 +1,5 @@
-<h2>Why Pick me?</h2>
-<%= f.text_area :why_me %>
+<div class = "container">
+    <h2 class="input-header">Why Pick me?</h2>
+    <%= f.text_area :why_me , :class => 'text-box', :placeholder => 'Tell us why dudes/dudettes' %>
+    <%= f.hidden_field :id %>
+</div>

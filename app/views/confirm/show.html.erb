@@ -1,3 +1,5 @@
+<%= form_for @apprenticeform, :url => confirm_step_path, method: :post do |f| %>
+
 <h2 class="input-header">Confirm Information</h2>
 
   <strong>Basic Information</strong></br>
@@ -16,3 +18,8 @@
 
   <strong>Who Am I?</strong>
   <%=h @apprenticeform.why_me %></br>
+
+  <%= f.hidden_field :id %>
+
+  <%= f.submit "Confirm", :class => 'button' %>
+<% end %>

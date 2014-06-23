@@ -1,18 +1,18 @@
 // Place all the styles related to the apprentices controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-*= require font-awesome
 
 @import 'reset';
 @import 'page';
 
-$Font-book: "Bodoni W01 Book 709611", "Times New Roman";
-$Font-bold: "Bodoni W01 Bold 709602", "Times New Roman";
-$Font-bold-italic: "Bodoni W01 Bold Italic 709608", "Times New Roman";
+$font-book: "Bodoni W01 Book 709611", "Times New Roman";
+$font-bold: "Bodoni W01 Bold 709602", "Times New Roman";
+$font-bold-italic: "Bodoni W01 Bold Italic 709608", "Times New Roman";
 $apprentice-blue: #C7E1E9;
 $apprentice-green: #B7E4C4;
 $apprentice-orange: #FAC8A1;
 $apprentice-yellow: #F8F0B4;
+$light-yellow: #faf5cb;
 $black: #000;
 $gray: #747474;
 $apprentice-radius: 6px;
@@ -32,9 +32,8 @@ $apprentice-radius: 6px;
 
 .edit_apprentice_form {
   margin: 0 auto;
-  font-family: $Font-book;
+  font-family: $font-book;
   line-height: 2em;
-  width: 35em;
 }
 
 .text-short, .dates_available, {
@@ -42,9 +41,9 @@ $apprentice-radius: 6px;
   width: 60%;
   margin: 1.5em auto 10px;
   padding: 20px;
-  font-size: 16px;
+  font-size: 1.5em;
   color: inherit;
-  border: 1px solid #aaa;
+  border: 1px solid #90c4d3;
   outline: 0;
   border-radius: 6px;
   font-family: "Bodoni W01 Book 709611", "Times New Roman";
@@ -54,9 +53,9 @@ $apprentice-radius: 6px;
   padding: 20px;
   width: 60%;
   height: 23.438em;
-  border: 1px solid #aaa;
+  border: 1px solid #90c4d3;
   border-radius: $apprentice-radius;
-  font-family: $Font-book;
+  font-family: $font-book;
 }
 .yes-no--response, .willing_to_relocate {
   display: inline-block;
@@ -68,10 +67,18 @@ $apprentice-radius: 6px;
 }
 
 :focus {
-  outline-width: thick;
-  outline-style: solid;
-  outline-color: $apprentice-orange;
-  background-color: $apprentice-yellow;
+  outline: none;
+  border-color: $apprentice-orange;
+  box-shadow: 0 0 0.5em $apprentice-orange;
+  background-color: #faf5cb;
+}
+
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-year-field[aria-valuetext="blank"],
+::-webkit-datetime-edit-month-field[aria-valuetext="blank"],
+::-webkit-datetime-edit-day-field[aria-valuetext="blank"],
+::-webkit-datetime-edit-month-field[aria-valuetext="blank"] + ::-webkit-datetime-edit-text[aria-valuetext="blank"] {
+  color: $gray;
 }
 
 input[type=text] {
@@ -116,12 +123,6 @@ input[type=text] {
   border: none;
   border-radius: $apprentice-radius;
 }
-::-webkit-datetime-edit-year-field[aria-valuetext=blank],
-::-webkit-datetime-edit-month-field[aria-valuetext=blank],
-::-webkit-datetime-edit-day-field[aria-valuetext=blank],
-::-webkit-datetime-edit-month-field[aria-valuetext=blank] + ::-webkit-datetime-edit-text[aria-valuetext=blank] {
-  color: $gray;
-}
 
 @mixin placeholder($placeholder-stuff) {
   -webkit-placeholder: $placeholder-stuff;
@@ -139,6 +140,20 @@ input[type=text] {
 
 .confirm-container {
   background-color: $apprentice-orange;
+}
+
+.info-wrapper {
+  margin: 0 auto;
+  background-color: #ecf5f7;
+  width: 60%;
+  border-radius: $apprentice-radius;
+  padding:1.5em;
+}
+
+.completed {
+  margin-top: -3.1em;
+  background-color: $apprentice-blue;
+  padding: 3em 0;
 }
 
 /* --- Parameters --- */

@@ -1,6 +1,8 @@
 // Place all the styles related to the apprentices controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*= require font-awesome
+
 @import 'reset';
 @import 'page';
 
@@ -26,6 +28,13 @@ $apprentice-radius: 6px;
   color: $gray;
   font-style: italic;
   font-weight: normal;
+}
+
+.edit_apprentice_form {
+  margin: 0 auto;
+  font-family: $Font-book;
+  line-height: 2em;
+  width: 35em;
 }
 
 .text-short, .dates_available, {
@@ -88,6 +97,7 @@ input[type=text] {
   color: white;
   border: none;
   border-radius: $apprentice-radius;
+  letter-spacing: 0.05em;
 }
 
 .button:hover, .button-special:hover {
@@ -125,6 +135,10 @@ input[type=text] {
   width: 100%;
   margin-top: 1em;
   padding: 0.5em 0 2em 0;
+}
+
+.confirm-container {
+  background-color: $apprentice-orange;
 }
 
 /* --- Parameters --- */

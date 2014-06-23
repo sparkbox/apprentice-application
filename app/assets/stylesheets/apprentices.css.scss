@@ -4,6 +4,9 @@
 @import 'reset';
 @import 'page';
 
+$Font-book: "Bodoni W01 Book 709611", "Times New Roman";
+$Font-bold: "Bodoni W01 Bold 709602", "Times New Roman";
+$Font-bold-italic: "Bodoni W01 Bold Italic 709608", "Times New Roman";
 $apprentice-blue: #C7E1E9;
 $apprentice-green: #B7E4C4;
 $apprentice-orange: #FAC8A1;
@@ -21,25 +24,30 @@ $apprentice-radius: 6px;
 
 @include placeholder {
   color: $gray;
+  font-style: italic;
   font-weight: normal;
 }
 
 .text-short, .dates_available, {
   display: block;
-  width: 200px;
+  width: 60%;
   margin: 1.5em auto 10px;
-  padding: 10px;
-  font-size: 14px;
+  padding: 20px;
+  font-size: 16px;
   color: inherit;
   border: 1px solid #aaa;
   outline: 0;
   border-radius: 6px;
+  font-family: "Bodoni W01 Book 709611", "Times New Roman";
 }
 
 .text-box {
-  padding: 10px;
+  padding: 20px;
   width: 60%;
   height: 23.438em;
+  border: 1px solid #aaa;
+  border-radius: $apprentice-radius;
+  font-family: $Font-book;
 }
 .yes-no--response, .willing_to_relocate {
   display: inline-block;
@@ -54,6 +62,7 @@ $apprentice-radius: 6px;
   outline-width: thick;
   outline-style: solid;
   outline-color: $apprentice-orange;
+  background-color: $apprentice-yellow;
 }
 
 input[type=text] {
@@ -66,7 +75,7 @@ input[type=text] {
   text-transform: uppercase;
   font-size: 1em;
   letter-spacing: 0.1em;
-  margin: 1.5em 0 1.2em 0;
+  margin: 2.5em 0 1.2em 0;
 }
 
 .button {
@@ -114,6 +123,7 @@ input[type=text] {
 .container {
   background-color: $apprentice-blue;
   width: 100%;
+  margin-top: 1em;
   padding: 0.5em 0 2em 0;
 }
 
@@ -129,3 +139,5 @@ input[type=text] {
   background-color: tomato;
 }
 /* --- end --- */
+
+@import 'mediaqueries';

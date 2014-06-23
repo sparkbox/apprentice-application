@@ -1,8 +1,14 @@
+<header class="page-header"></header>
+  <%= image_tag "SBX_logo_icon_2.svg", class: "logo-special--2", alt: "Sparkbox Logo" %>
+<section class="info">
+  <h1 class="info-header">Step 5</h1>
+  <p class="info-secondary">Take a minute to look over your entries. If you need to go back and make some edits, you can do this before submitting. Once you hit Submit, your application will be submitted as is. Be sure it contains all the information you want us to have about you.</p>
+</section>
+<div class="container"
 <%= form_for @apprenticeform, :url => confirm_step_path, method: :post do |f| %>
 
 <h2 class="input-header">Confirm Information</h2>
 
-  <strong>Basic Information</strong></br>
   First Name: <%= @apprenticeform.first_name %></br>
   Last Name: <%=h @apprenticeform.last_name %></br>
   Email: <%=h @apprenticeform.email %></br>
@@ -10,19 +16,17 @@
   Available End Date: <%=h @apprenticeform.end_date %></br>
   Willingness to Move: <%=h @apprenticeform.willing_to_move %></br>
 
-  <strong>Demographic Information</strong>
   Phone Number:<%=h @apprenticeform.phone_number %></br>
   Address: <%=h @apprenticeform.address %></br>
   Personal Url: <%=h @apprenticeform.url %></br>
   Social Url: <%=h @apprenticeform.social_url %></br>
 
-  <strong>Who Am I?</strong>
   <%=h @apprenticeform.about_me %></br>
 
-  <strong>Why Me?</strong>
   <%=h @apprenticeform.why_me %></br>
 
   <%= f.hidden_field :id %>
 
   <%= f.submit "Confirm", :class => 'button' %>
 <% end %>
+</div>

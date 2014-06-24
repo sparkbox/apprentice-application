@@ -1,5 +1,4 @@
-class ReasonController < ApplicationController
-
+class ConfirmController < ApplicationController
   def show
     @apprenticeform = ApprenticeForm.find(params[:id])
   end
@@ -7,12 +6,12 @@ class ReasonController < ApplicationController
   def update
     @apprenticeform = ApprenticeForm.find(params[:apprentice_form][:id])
     @apprenticeform.update_attributes(apprentice_form_params)
-    redirect_to check_confirm_step_path(params[:apprentice_form][:id])
+    redirect_to complete_application_path(params[:apprentice_form][:id])
   end
 
   private
   def apprentice_form_params
-    params.require(:apprentice_form).permit(:why_me, :id)
+    params.require(:apprentice_form).permit(:id)
   end
 
 end

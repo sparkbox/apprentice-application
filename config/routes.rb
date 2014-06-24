@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   root 'welcome#new' #root
-  post 'welcome' => 'welcome#create'
+  post 'step_one' => 'start#create'
+  get 'step_one/:id' => 'start#show', as: 'edit_first_step'
+  # post 'welcome' => 'welcome#create' #this should be first page
 
   # resources :demographics, :only => [:create, :show, :edit, :update], as: 'step_two'
 

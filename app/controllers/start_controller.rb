@@ -6,20 +6,21 @@ class StartController < ApplicationController
 
 
   def create
-    @apprenticeform = ApprenticeForm.create(apprentice_form_params)
-
-    if @apprenticeform.errors.any?
-      render :edit
+    @apprenticeform = ApprenticeForm.find(params[:apprentice_form][:id])
+    if @apprenticeform != nil
+      @apprenticeform.update_attributes(apprentice_form_params)
+      redirect_to edit_second_step_path(@apprenticeform.token)
     else
+      @apprenticeform = ApprenticeForm.create(apprentice_form_params)
       redirect_to edit_second_step_path(@apprenticeform.token)
     end
   end
 
-  def update
-    @apprenticeform = ApprenticeForm.find(params[:apprentice_form][:id])
-    @apprenticeform.update_attributes(apprentice_form_params)
-    redirect_to edit_second_step_path(@apprenticeform.token)
-  end
+  # def update
+  #   @apprenticeform = ApprenticeForm.find(params[:apprentice_form][:id])
+  #   @apprenticeform.update_attributes(apprentice_form_params)
+  #   redirect_to edit_second_step_path(@apprenticeform.token)
+  # end
 
   private
   def apprentice_form_params

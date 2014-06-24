@@ -27,6 +27,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    ar-tokens (0.0.6)
+      activerecord
     arel (5.0.1.20140414130214)
     builder (3.2.2)
     capybara (2.2.1)
@@ -124,6 +126,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ar-tokens
   capybara
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)

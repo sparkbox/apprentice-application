@@ -1,7 +1,7 @@
 class FinishController < ApplicationController
 
   def show
-    @apprenticeform = ApprenticeForm.find(params[:id])
+    @apprenticeform = ApprenticeForm.find_by_token(params[:id])
   end
 
   def update

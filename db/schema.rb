@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140620185549) do
+ActiveRecord::Schema.define(version: 20140623134341) do
 
   create_table "apprentice_forms", force: true do |t|
     t.string   "first_name"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20140620185549) do
     t.string   "social_url"
     t.string   "about_me"
     t.string   "why_me"
+    t.string   "token"
   end
 
 end

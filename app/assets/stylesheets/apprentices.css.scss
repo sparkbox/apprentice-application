@@ -56,6 +56,7 @@ $apprentice-radius: 6px;
   border: 1px solid #90c4d3;
   border-radius: $apprentice-radius;
   font-family: $font-book;
+  font-size: 1.5em;
 }
 .yes-no--response, .willing_to_relocate {
   display: inline-block;
@@ -89,13 +90,14 @@ input[type=text] {
 .input-header {
   font-family: "Bodoni W01 Book 709611", "Times New Roman";
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 1.2em;
   letter-spacing: 0.1em;
   margin: 2.5em 0 1.2em 0;
 }
 
 .button {
   font-family: "Bodoni W01 Bold Italic 709608", "Times New Roman";
+  font-size: 1.2em;
   display: block;
   width: 222px;
   padding: 1em 1em;
@@ -143,6 +145,8 @@ input[type=text] {
 }
 
 .info-wrapper {
+  font-size: 1.5em;
+  line-height: 3em;
   margin: 0 auto;
   background-color: #ecf5f7;
   width: 60%;
@@ -150,10 +154,25 @@ input[type=text] {
   padding:1.5em;
 }
 
+.text-box-inputs {
+  font-size: 1.5em;
+  line-height: 3em;
+  margin: 0 auto;
+  background-color: #ecf5f7;
+  width: 60%;
+  border-radius: $apprentice-radius;
+  padding:1.5em;
+  text-align: left;
+}
+
 .completed {
-  margin-top: -3.1em;
+  margin-top: -1.2em;
   background-color: $apprentice-blue;
   padding: 3em 0;
+}
+
+i {
+  font-size: 10em;
 }
 
 /* --- Parameters --- */

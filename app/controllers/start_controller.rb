@@ -4,10 +4,9 @@ class StartController < ApplicationController
     @apprenticeform = ApprenticeForm.find_by_token(params[:id])
   end
 
-
   def create
     @apprenticeform = ApprenticeForm.find(params[:apprentice_form][:id])
-    if @apprenticeform != nil
+    if @apprenticeform = nil
       @apprenticeform.update_attributes(apprentice_form_params)
       redirect_to edit_second_step_path(@apprenticeform.token)
     else

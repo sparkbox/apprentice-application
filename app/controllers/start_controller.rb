@@ -6,24 +6,20 @@ class StartController < ApplicationController
 
   def create
     # debugger
-    @apprenticeform = ApprenticeForm.find_or_initialize_by(id: params[:apprentice_form][:id])
-    # @apprenticeform.new_record?
-    p @apprenticeform.new_record?
-      @apprenticeform = ApprenticeForm.create(apprentice_form_params)
+    @apprenticeform = ApprenticeForm.new(apprentice_form_params)
+    if @apprenticeform.valid?
       @apprenticeform.save!
       redirect_to edit_second_step_path(@apprenticeform.token)
-    # else
-    #   @apprenticeform.update_attributes(apprentice_form_params)
-    #   @apprenticeform.save!
-    #   redirect_to edit_second_step_path(@apprenticeform.token)
-    # end
+    else
+      render :show
+    end
   end
 
-  # def update
-  #   @apprenticeform = ApprenticeForm.find(params[:apprentice_form][:id])
-  #   @apprenticeform.update_attributes(apprentice_form_params)
-  #   redirect_to edit_second_step_path(@apprenticeform.token)
-  # end
+  def update
+    @apprenticeform = ApprenticeForm.find(params[:apprentice_form][:id])
+    @apprenticeform.update_attributes(apprentice_form_params)
+    redirect_to edit_second_step_path(@apprenticeform.token)
+  end
 
   private
   def apprentice_form_params

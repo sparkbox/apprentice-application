@@ -5,7 +5,7 @@
 
 <section class="container">
 
-  <%= form_for @apprenticeform, :url => step_one_path, method: :post, html: {class:"apprentice_application_form"} do |f| %>
+  <%= form_for @apprenticeform, :url => step_one_path, method: :put, html: {class:"apprentice_application_form"} do |f| %>
   <%= render 'basic_information_step', :f => f %>
 
   <%= f.submit "Begin Application", :class => 'button' %>

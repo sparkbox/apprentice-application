@@ -5,12 +5,15 @@ class StartController < ApplicationController
   end
 
   def create
-    @apprenticeform = ApprenticeForm.find_or_initialize_by(params[:apprentice_form])
-    unless @apprenticeform.new_record?
-      @apprenticeform.update_attributes(apprentice_form_params)
+    # debugger
+    @apprenticeform = ApprenticeForm.find_or_initialize_by(params[:apprentice_form][:id])
+    if @apprenticeform.new_record?
+      @apprenticeform = ApprenticeForm.create(apprentice_form_params)
+      @apprenticeform.save!
       redirect_to edit_second_step_path(@apprenticeform.token)
     else
-      @apprenticeform = ApprenticeForm.create(apprentice_form_params)
+      @apprenticeform.update_attributes(apprentice_form_params)
+      @apprenticeform.save!
       redirect_to edit_second_step_path(@apprenticeform.token)
     end
   end

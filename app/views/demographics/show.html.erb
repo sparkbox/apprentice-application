@@ -1,19 +1,22 @@
 <header class="page-header"></header>
+
 <%= image_tag "SBX_logo_icon_2.svg", class: "logo-special--2", alt: "Sparkbox Logo" %>
 
-<%= render 'section_2' %>
+<body>
+  <%= render 'section_2' %>
 
-<%= form_for @apprenticeform, :url => step_two_path, method: :post do |f| %>
+  <%= form_for @apprenticeform, :url => step_two_path, method: :post do |f| %>
 
-<div class="container">
-  <h2 class="input-header">Demographic Information</h2>
-  <%= f.text_field :phone_number, :class => 'text-short', :placeholder => 'phone number', :maxlength => '128' %>
-  <%= f.text_field :address, :class => 'text-short', :placeholder => 'address', :maxlength => '128' %>
-  <%= f.text_field :url, :class => 'text-short', :placeholder => 'personal url', :maxlength => '128' %>
-  <%= f.text_field :social_url, :class => 'text-short', :placeholder => 'social url', :maxlength => '128' %>
-  <%= f.hidden_field :id %>
-  <%= f.submit "Next Step", :class => 'button' %>
-<% end %>
-
-<%= link_to "Link to first page", edit_first_step_path%>
-</div>
+  <div class="container">
+    <h2 class="input-header">Demographic Information</h2>
+    <%= f.text_field :phone_number, :class => 'text-short', :placeholder => 'phone number', :maxlength => '128' %>
+    <%= f.text_field :address, :class => 'text-short', :placeholder => 'address', :maxlength => '128' %>
+    <%= f.text_field :url, :class => 'text-short', :placeholder => 'personal url', :maxlength => '128' %>
+    <%= f.text_field :social_url, :class => 'text-short', :placeholder => 'social url', :maxlength => '128' %>
+    <%= f.hidden_field :id %>
+    <%= f.submit "Next Step", :class => 'button' %>
+  <% end %>
+  
+  <%= link_to "Link to first page", edit_first_step_path%>
+  </div>
+</body> 

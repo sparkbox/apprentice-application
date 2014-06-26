@@ -20,6 +20,8 @@ gem 'capybara'
 
 gem 'font-awesome-sass'
 
+gem 'debugger'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

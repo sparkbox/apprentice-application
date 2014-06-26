@@ -5,8 +5,8 @@ class StartController < ApplicationController
   end
 
   def create
-    @apprenticeform = ApprenticeForm.find(params[:apprentice_form][:id])
-    if @apprenticeform = nil
+    @apprenticeform = ApprenticeForm.find_or_initialize_by(params[:apprentice_form])
+    unless @apprenticeform.new_record?
       @apprenticeform.update_attributes(apprentice_form_params)
       redirect_to edit_second_step_path(@apprenticeform.token)
     else
@@ -23,7 +23,7 @@ class StartController < ApplicationController
 
   private
   def apprentice_form_params
-    params.require(:apprentice_form).permit(:first_name, :last_name, :email, :start_date, :end_date, :willing_to_move, :id)
+    params.require(:apprentice_form).permit(:first_name, :last_name, :email, :start_date, :end_date, :willing_to_move)
   end
 
 end

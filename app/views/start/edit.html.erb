@@ -1,0 +1,17 @@
+<header class="page-header">
+  <h1 class="page-title--special">Learn More &amp; Apply</h1>
+</header>
+<%= image_tag "SBX_logo_icon_2.svg", class: "logo-special", alt: "Sparkbox Logo" %>
+
+<section class="container">
+
+  <%= form_for @apprenticeform, :url => step_one_path, method: :put, html: {class:"apprentice_application_form"} do |f| %>
+  <%= render 'basic_information_step', :f => f %>
+
+  <%= f.submit "Begin Application", :class => 'button' %>
+
+  <% end %>
+
+  <%= debug @apprenticeform if Rails.env.development? %>
+
+</section>

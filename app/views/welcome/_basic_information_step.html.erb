@@ -3,8 +3,8 @@
   <%= f.text_field :last_name, :class => 'text-short', :placeholder => 'last name', :maxlength => '128'%>
   <%= f.text_field :email, :class => 'text-short', :placeholder => 'email', :maxlength => '128' %>
 <h2 class="input-header">Available start &amp; end dates</h2>
-  <%= f.date_field :start_date, :class => 'dates_available', :placeholder => 'from' %>
-  <%= f.date_field :end_date, :class => 'dates_available', :placeholder => 'to' %>
+  <%= f.text_field :start_date, :class => 'dates_available', :placeholder => 'MM/DD/YY' %>
+  <%= f.text_field :end_date, :class => 'dates_available', :placeholder => 'MM/DD/YY' %>
 <h2 class="input-header">Are you willing to move to Dayton, Ohio?</h2>
 <div class="yes-no">
   <%= f.radio_button :willing_to_move, true, :checked => true, :class => 'willing_to_relocate'%><p class="yes-no--response">Yes. I'll be there.</p>
